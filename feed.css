@@ -1,0 +1,200 @@
+:root {
+    --primary-gradient: linear-gradient(90deg, #FF7E21, #F22987);
+    --bg-color: #F8F9FA;
+    --card-bg: #FFFFFF;
+    --text-dark: #333;
+    --text-light: #666;
+    --success-bg: #E6F9F1;
+    --success-text: #27AE60;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+}
+
+/* Navbar ORIGINAL */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    font-size: 22px;
+    color: #F22987;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links a.active {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 10px;
+}
+
+/* Layout */
+.container { padding: 40px 5%; }
+
+.hero h1 { font-size: 28px; margin-bottom: 5px; }
+.hero p { color: var(--text-light); margin-bottom: 30px; }
+
+.search-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.search-bar {
+    flex: 1;
+    background: white;
+    padding: 12px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ddd;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.filter-btn {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 0 20px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+/* GRID */
+.pet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.pet-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+/* 🔥 HOVER ADICIONADO */
+.pet-card:hover {
+    transform: scale(1.05);
+}
+
+/* imagem */
+.pet-image-container {
+    position: relative;
+    height: 250px;
+}
+
+.pet-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* favorito */
+.fav-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255,255,255,0.8);
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #999;
+}
+
+.fav-btn.active {
+    color: #F22987;
+}
+
+/* overlay */
+.pet-info-overlay {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* detalhes */
+.pet-details { padding: 20px; }
+
+.pet-meta {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+.pet-description {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+.pet-location {
+    font-size: 13px;
+    color: #FF7E21;
+    margin-bottom: 20px;
+}
+
+/* botões */
+.btn-action {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.interest-btn {
+    background: var(--primary-gradient);
+    color: white;
+}
+
+.sent-btn {
+    background: var(--success-bg);
+    color: var(--success-text);
+}

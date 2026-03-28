@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdotaPet - Login</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+    <div class="background-emojis">
+        <div class="emoji emoji-1">🐕</div>
+        <div class="emoji emoji-2">🐱</div>
+        <div class="emoji emoji-3">🐾</div>
+        <div class="emoji emoji-4">❤️</div>
+    </div>
+
+    <div class="container">
+      
+        <div class="header">
+            <div class="logo-circle">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h1 class="main-title">AdotaPet</h1>
+            <p class="subtitle">
+                <i class="fas fa-paw"></i>
+                Conectando corações a patinhas
+                <i class="fas fa-paw"></i>
+            </p>
+        </div>
+
+       
+        <div class="main-grid">
+        
+            <div class="info-card">
+                <h2 class="info-title">Por que adotar?</h2>
+                
+                <div class="benefits-list">
+                    <div class="benefit-item benefit-orange">
+                        <div class="benefit-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Salve uma vida</h3>
+                            <p>Milhares de animais aguardam por um lar amoroso</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item benefit-pink">
+                        <div class="benefit-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>ONGs confiáveis</h3>
+                            <p>Conectamos você com organizações verificadas</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item benefit-purple">
+                        <div class="benefit-icon">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <div class="benefit-content">
+                            <h3>Amor incondicional</h3>
+                            <p>Ganhe um companheiro fiel para toda a vida</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="form-card">
+              
+                <div class="toggle-buttons">
+                    <button class="toggle-btn active" data-mode="login">Entrar</button>
+                    <button class="toggle-btn" data-mode="register">Cadastrar</button>
+                </div>
+
+               
+                <div class="user-type-selector">
+                    <button class="user-type-btn active" data-type="adopter">
+                        <i class="fas fa-user"></i>
+                        <span>Adotante</span>
+                    </button>
+                    <button class="user-type-btn" data-type="ngo">
+                        <i class="fas fa-building"></i>
+                        <span>ONG</span>
+                    </button>
+                </div>
+
+               
+                <form id="loginForm">
+                  
+                    <div class="form-group" id="nameGroup" style="display: none;">
+                        <label for="name">
+                            <span id="nameLabel">Seu nome</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            placeholder="João Silva"
+                        >
+                    </div>
+
+                   
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-envelope"></i>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                placeholder="seu@email.com"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                   
+                    <div class="form-group">
+                        <label for="password">Senha</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-lock"></i>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                placeholder="••••••••"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                   
+                    <button type="submit" class="submit-btn">
+                        <span id="submitText">✨ Entrar</span> 
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        
+        <p class="footer-text">
+            <i class="fas fa-heart"></i>
+            Adote com amor, mude uma vida
+            <i class="fas fa-paw"></i>
+        </p>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
