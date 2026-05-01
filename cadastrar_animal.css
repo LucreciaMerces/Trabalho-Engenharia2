@@ -1,0 +1,174 @@
+
+
+#modalAdicionar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+#modalAdicionar.active {
+    display: flex;
+}
+
+.modal-box {
+    background: white;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+    animation: modalPop 0.3s ease;
+}
+
+@keyframes modalPop {
+    from { opacity: 0; transform: scale(0.95) translateY(30px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Cabeçalho */
+.modal-header {
+    background: var(--primary-gradient);
+    padding: 28px 32px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.plus-icon {
+    width: 46px;
+    height: 46px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 42px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 8px;
+}
+
+.close-btn:hover {
+    opacity: 0.8;
+}
+
+/* Corpo */
+.modal-body {
+    padding: 35px 32px 42px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 15.5px;
+}
+
+.required {
+    color: #ff4d4d;
+}
+
+.input-field {
+    width: 100%;
+    padding: 15px 18px;
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    font-size: 16px;
+    transition: all 0.2s;
+}
+
+.input-field:focus {
+    border-color: var(--pink);
+    box-shadow: 0 0 0 4px rgba(242, 41, 135, 0.12);
+    outline: none;
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.hint {
+    font-size: 13.5px;
+    color: #888;
+    margin-top: 6px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Botões */
+.modal-buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.btn-cancel {
+    flex: 1;
+    padding: 16px 20px;
+    background: white;
+    color: #555;
+    border: 2px solid #ddd;
+    border-radius: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-cancel:hover {
+    background: #f8f9fa;
+}
+
+.btn-adicionar {
+    flex: 1;
+    padding: 16px 20px;
+    background: var(--primary-gradient);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.25s;
+}
+
+.btn-adicionar:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
