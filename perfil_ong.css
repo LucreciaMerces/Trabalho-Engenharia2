@@ -1,0 +1,35 @@
+:root {
+    --f-gradient: linear-gradient(90deg, #FF7E21, #F22987);
+    --pink: #F22987;
+    --bg: #F8F9FA;
+    --border: #EEEEEE;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { background-color: var(--bg); }
+
+.navbar { display: flex; justify-content: space-between; padding: 15px 5%; background: white; border-bottom: 1px solid var(--border); align-items: center; }
+.logo { color: var(--pink); font-weight: bold; font-size: 22px; display: flex; gap: 8px; }
+.nav-links { display: flex; gap: 20px; }
+.nav-links a { text-decoration: none; color: #333; display: flex; align-items: center; gap: 8px; }
+.nav-links a.active { background: var(--f-gradient); color: white; padding: 8px 18px; border-radius: 10px; }
+
+.container { padding: 30px 5%; max-width: 1200px; margin: 0 auto; }
+
+.profile-card { background: white; border-radius: 20px; padding: 35px; margin-bottom: 30px; border: 1px solid var(--border); box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.profile-header { display: flex; align-items: center; gap: 25px; margin-bottom: 25px; }
+.profile-avatar { width: 90px; height: 90px; background: var(--f-gradient); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 35px; }
+
+.badge { background: #FCE4EC; color: var(--pink); padding: 4px 12px; border-radius: 15px; font-size: 13px; font-weight: bold; }
+
+.stats-container { display: flex; gap: 20px; margin-bottom: 25px; }
+.stat-box { flex: 1; padding: 20px; border-radius: 18px; }
+.stat-box.available { background-color: #EBF2FF; color: #4A8CFF; }
+.stat-box.adopted { background-color: #E7FBF3; color: #36C78B; }
+.stat-number { font-size: 32px; font-weight: bold; }
+
+.btn-primary-ong { 
+    width: 100%; height: 60px; background: var(--f-gradient); color: white; border: none; 
+    border-radius: 15px; font-size: 18px; font-weight: 600; cursor: pointer; 
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+}
